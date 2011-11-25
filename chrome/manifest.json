@@ -1,0 +1,16 @@
+{
+  "name": "RB Notifier",
+  "version": "1.0",
+  "description": "Get notifications when RedBox movies you want are available near you.",
+  "background_page": "background.html",
+  "content_scripts": [{
+    "matches": ["http://www.redbox.com/*"],
+    "css": ["styles.css"],
+    "js": ["jquery-1.7.min.js", "Content.js"]
+  }],
+  "permissions": [
+    "http://www.redbox.com/",
+    "http://localhost/",
+    "notifications"
+  ]
+}

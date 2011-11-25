@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <script>
+      var regex = new RegExp("[\\?&]id=([^&#]*)");
+      var id = regex.exec(window.location.href)[1];
+
+      chrome.extension.sendRequest({action: "notify", id: id}, function(response) 
+      { 
+        document.write(response.display);
+      });
+
+      function movieInfo(uri)
+      {
+        chrome.tabs.create({url: 'http://www.redbox.com/movies/' + uri});
+        return true;
+      }
+
+      function kioskInfo()
+      {
+        chrome.tabs.create({url: 'http://www.redbox.com/movies'});
+        return true;
+      }
+    </script>
+    <div>Loading...</div>
+  </body>
+</html>

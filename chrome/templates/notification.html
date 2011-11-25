@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td width="60px">
+      <center>
+        <a href="javascript:movieInfo('{{vuri}}');" title="{{vname}}"><img width="50px" height="80px" src="http://images.redbox.com/Images/EPC/Thumb150/{{id}}.jpg"/></a> <br/>
+      </center>
+    </td>
+
+    <td>
+      <table>
+        <tr>
+          <td valign="top"><img src="http://www.redbox.com/Content/images/kiosk_icon.gif"/></td>
+          <td>
+            <a href="javascript:kioskInfo();">{{#kinfo}}{{vendor}} {{#indoor}}Indoor{{/indoor}}{{^indoor}}Outdoor{{/indoor}}{{/kinfo}}</a><br/>
+            {{#kinfo}}
+              {{addr}}<br/> 
+              {{city}}<br/>
+              {{state}} {{zip}}
+            {{/kinfo}}
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<span></span>
